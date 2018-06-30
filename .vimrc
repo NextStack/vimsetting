@@ -31,7 +31,7 @@ filetype indent on
 filetype on
 set clipboard+=unnamed
 set nobackup
-"set cursorline
+set cursorline
 set magic
 set autoindent
 set cindent
