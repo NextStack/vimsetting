@@ -15,6 +15,28 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+"Set: onedark
+let g:onedark_termcolors = 256
+colorscheme onedark
+
+"Set: nerdtree
+"let g:NERDTreeDirArrowExpandable = '>'
+"let g:NERDTreeDirArrowCollapsible = '∨'
+map <C-\> :NERDTreeToggle<CR>
+
+"Set: ale
+let g:ale_linters_explicit = 1
+let g:ale_linters = {
+\	'javascript': ['eslint']
+\}
+
+"Set: airline
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
+"Set: gitgutter
+let g:gitgutter_eager = 0
+
 "Set: System
 set number "显示行号
 syntax on "语法高亮
@@ -45,29 +67,10 @@ set showmatch
 set matchtime=2
 set mouse=a
 set showcmd "显示输入的命令
+set guicursor=v:hor10-Cursor,c:hor10-Cursor,ci:hor10-Cursor
+set guioptions-=T
 
 if (has("termguicolors"))
   set termguicolors
 endif
-
-"Set: onedark
-let g:onedark_termcolors = 256
-colorscheme onedark
-
-"Set: nerdtree
-"let g:NERDTreeDirArrowExpandable = '>'
-"let g:NERDTreeDirArrowCollapsible = '∨'
-map <C-\> :NERDTreeToggle<CR>
-
-"Set: ale
-let g:ale_linters_explicit = 1
-let g:ale_linters = {
-\	'javascript': ['eslint']
-\}
-
-"Set: airline
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-
-"Set: gitgutter
-let g:gitgutter_eager = 0
+highlight cursor gui=reverse guifg=NONE guibg=NONE
