@@ -22,7 +22,8 @@ colorscheme onedark
 "Set: nerdtree
 "let g:NERDTreeDirArrowExpandable = '>'
 "let g:NERDTreeDirArrowCollapsible = '∨'
-map <C-\> :NERDTreeToggle<CR>
+noremap <C-Bslash> :NERDTreeToggle<CR>
+noremap <A-/> :NERDTreeFocus<CR>
 
 "Set: ale
 let g:ale_linters_explicit = 1
@@ -53,6 +54,7 @@ filetype indent on
 filetype on
 set clipboard+=unnamed
 set nobackup
+set nowrap
 set cursorline
 set magic
 set autoindent
@@ -69,7 +71,10 @@ set mouse=a
 set showcmd "显示输入的命令
 set guicursor=v:hor10-Cursor,c:hor10-Cursor,ci:hor10-Cursor
 set guioptions-=T
-
+set guioptions-=r
+set guioptions-=l
+set guioptions-=R
+set guioptions-=L
 if (has("termguicolors"))
   set termguicolors
 endif
