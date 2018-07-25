@@ -1,6 +1,5 @@
 "Set: Plugins
 call plug#begin()
-"Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
@@ -13,6 +12,7 @@ Plug 'joshdick/onedark.vim',{'as':'onedark'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'jszakmeister/vim-togglecursor'
 call plug#end()
 
 "Set: onedark
@@ -22,8 +22,9 @@ colorscheme onedark
 "Set: nerdtree
 "let g:NERDTreeDirArrowExpandable = '>'
 "let g:NERDTreeDirArrowCollapsible = '∨'
-noremap <C-Bslash> :NERDTreeToggle<CR>
-noremap <A-/> :NERDTreeFocus<CR>
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['\.swp']
+noremap <C-Bslash> :NERDTreeFocus<CR>
 
 "Set: ale
 let g:ale_linters_explicit = 1
@@ -79,3 +80,15 @@ if (has("termguicolors"))
   set termguicolors
 endif
 highlight cursor gui=reverse guifg=NONE guibg=NONE
+if has("win32")
+  set guifont=FuraMono\ NF:h11
+  "source $VIMRUNTIME/delmenu.vim
+  "let $LANG = "en_US"
+  "set langmenu=en
+  "source $VIMRUNTIME/menu.vim
+endif
+if &term =~ "xterm\\|rxvt"
+  let &t_SI = "\e[5 q"
+  let &t_SR = "\e[3 q"
+  let &t_EI = "\e[0 q"
+endif
