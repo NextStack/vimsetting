@@ -80,8 +80,8 @@ if (has("termguicolors"))
   set termguicolors
 endif
 highlight cursor gui=reverse guifg=NONE guibg=NONE
-if has("win32")
-  set guifont=FuraMono\ NF:h11
+if has("gui")
+  set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 10
   "source $VIMRUNTIME/delmenu.vim
   "let $LANG = "en_US"
   "set langmenu=en
