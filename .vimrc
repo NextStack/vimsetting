@@ -1,7 +1,7 @@
 "Set: Plugins
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -20,11 +20,19 @@ let g:onedark_termcolors = 256
 colorscheme onedark
 
 "Set: nerdtree
-"let g:NERDTreeDirArrowExpandable = '>'
-"let g:NERDTreeDirArrowCollapsible = '∨'
+"let g:NERDTreeDirArrowExpandable = '+'
+"let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.swp']
+let g:NERDTreeAutoDeleteBuffer = 1
 noremap <C-Bslash> :NERDTreeFocus<CR>
+
+"Set devicons
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFolderExtensionPatternMatching = 0
 
 "Set: ale
 let g:ale_linters_explicit = 1
