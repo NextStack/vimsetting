@@ -12,7 +12,7 @@ Plug 'joshdick/onedark.vim',{'as':'onedark'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
-Plug 'jszakmeister/vim-togglecursor'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 "Set: onedark
