@@ -12,6 +12,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 "Set: onedark
