@@ -7,7 +7,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'dracula/vim',{'as':'dracula'}
 Plug 'joshdick/onedark.vim',{'as':'onedark'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
