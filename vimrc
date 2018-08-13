@@ -14,8 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 "Set: onedark
@@ -36,6 +35,9 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 0
+if has("win32")
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+endif
 
 "Set: ale
 let g:ale_linters_explicit = 1
@@ -92,7 +94,11 @@ if (has("termguicolors"))
 endif
 highlight cursor gui=reverse guifg=NONE guibg=NONE
 if has("gui")
-  set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 10
+  if has("win32")
+    set guifont=Hasklug_NF:h10
+  else
+    set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 10
+  endif
   "source $VIMRUNTIME/delmenu.vim
   "let $LANG = "en_US"
   "set langmenu=en
