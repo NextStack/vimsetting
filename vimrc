@@ -27,6 +27,9 @@ colorscheme onedark
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.swp']
 let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeCascadeSingleChildDir = 0
+let g:NERDTreeNaturalSort = 1
 noremap <C-Bslash> :NERDTreeFocus<CR>
 
 "Set devicons
@@ -35,6 +38,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 0
+let g:webdevicons_conceal_nerdtree_brackets = 0
 if has("win32")
   let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 endif
