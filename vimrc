@@ -27,6 +27,9 @@ colorscheme onedark
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.swp']
 let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeCascadeSingleChildDir = 0
+let g:NERDTreeNaturalSort = 1
 noremap <C-Bslash> :NERDTreeFocus<CR>
 
 "Set devicons
