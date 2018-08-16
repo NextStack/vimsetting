@@ -34,10 +34,10 @@ let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:DevIconsEnableFoldersOpenClose = 1
-let g:DevIconsEnableFolderExtensionPatternMatching = 0
-if has("win32")
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
-endif
+let g:DevIconsEnableFolderExtensionPatternMatching = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:airline_powerline_fonts = 1
+let g:webdevicons_conceal_nerdtree_brackets = 0
 
 "Set: ale
 let g:ale_linters_explicit = 1
