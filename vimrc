@@ -1,12 +1,11 @@
 "Set: Plugins
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim',{'as':'onedark'}
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
@@ -23,7 +22,7 @@ colorscheme onedark
 
 "Set: nerdtree
 "let g:NERDTreeDirArrowExpandable = '+'
-"let g:NERDTreeDirArrowCollapsible = '-'
+"let g:NERDTreeDirArrowCollapsible = '~'
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.swp']
 let g:NERDTreeAutoDeleteBuffer = 1
@@ -31,16 +30,6 @@ let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeNaturalSort = 1
 noremap <C-Bslash> :NERDTreeFocus<CR>
-
-"Set devicons
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:DevIconsEnableFolderExtensionPatternMatching = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-let g:airline_powerline_fonts = 1
-let g:webdevicons_conceal_nerdtree_brackets = 0
 
 "Set: ale
 let g:ale_linters_explicit = 1
@@ -100,12 +89,8 @@ if has("gui")
   if has("win32")
     set guifont=Hasklug_NF:h10
   else
-    set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 10
+    set guifont=Source\ Code\ Variable\ 10
   endif
-  "source $VIMRUNTIME/delmenu.vim
-  "let $LANG = "en_US"
-  "set langmenu=en
-  "source $VIMRUNTIME/menu.vim
 endif
 if &term =~ "xterm\\|rxvt"
   let &t_SI = "\e[5 q"
