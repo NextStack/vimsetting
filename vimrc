@@ -44,6 +44,9 @@ let g:airline#extensions#tabline#enabled = 1
 "Set: gitgutter
 let g:gitgutter_eager = 0
 
+"Set: closetag
+let g:closetag_filetypes = 'html,xhtml,jsx,vue'
+
 "Set: System
 set number "显示行号
 syntax on "语法高亮
