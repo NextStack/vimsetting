@@ -40,6 +40,7 @@ let g:ale_linters = {
 "Set: airline
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='luna'
 
 "Set: gitgutter
 let g:gitgutter_eager = 0
@@ -92,7 +93,7 @@ if has("gui")
   if has("win32")
     set guifont=Hasklug_NF:h10
   else
-    set guifont=Source\ Code\ Variable\ 10
+    set guifont=Source\ Code\ Variable\ 11
   endif
 endif
 if &term =~ "xterm\\|rxvt"
